@@ -1,7 +1,13 @@
 import { useEffect, useRef } from "react";
 import * as maplibregl from "maplibre-gl";
 import type { Map as MLMap, Marker } from "maplibre-gl";
+// Vite doesn't auto-bundle maplibre-gl's worker (it builds the URL
+// dynamically, so static analysis misses it) — resolve it explicitly as an
+// asset URL so the production build ships it and the worker actually loads.
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 import type { LogMap } from "../lib/storage";
+
+maplibregl.setWorkerUrl(maplibreWorkerUrl);
 
 export type Course = {
   id: string;

@@ -62,7 +62,7 @@ function App() {
 
       <div className="absolute top-0 left-0 w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 sm:px-5 py-3 bg-[#13131f]/95 backdrop-blur shadow-sm z-10 border-b border-white/10">
         <div>
-          <h1 className="font-display text-2xl font-bold text-white tracking-tight">coursemap</h1>
+          <h1 className="font-display text-2xl font-bold text-white tracking-tight">coursemap.va</h1>
           <p className="text-xs text-[#b3b8c2]">
             {xcCount} XC · {indoorCount} indoor · {trackCount} outdoor tracks · {marathonCount} marathons — Virginia
           </p>
